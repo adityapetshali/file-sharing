@@ -24,11 +24,137 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>File sharing app</title>
+    <style>
+      *, html {    
+    --primaryGradientBody: linear-gradient(93.12deg, #4c1982 0.52%, #e1a9e4 100%);
+              }
+             body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:var(--primaryGradientBody);
+        }
+        .text{
+          text-align: center;
+          color: black;
+        }
+
+        .container {
+            width: 400px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        input[type=text], input[type=password] {
+            width: 350px;
+            padding: 15px;
+            margin: 5px 0 22px 5px;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 392px;
+            opacity: 0.9;
+        }
+
+        .btn:hover {
+            opacity: 1;
+        }
+  </style>
+  <script>
+      function validateForm() {
+          var uname = document.getElementById("uname").value;
+          var psw = document.getElementById("psw").value;
+
+          // Email validation
+          var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+          if (!emailRegex.test(uname)) {
+              alert("Please enter a valid email address.");
+              return false;
+          }
+
+          // Password validation
+          var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+          if (!passwordRegex.test(psw)) {
+              alert("Password must contain at least one uppercase letter, one lowercase letter, one digit, and be at least 8 characters long.");
+              return false;
+          }
+
+          return true;
+      }
+  </script>
   </head>
   <body>
+    <h1 class ="text">Blissfull file sharing</h1>
+  
+<div class="container">
+    <form onsubmit="return validateForm()">
+      <h5 class="text">Login</h5>
+        <label for="uname"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" id="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" required>
+
+        <button type="submit" class="btn"><a href ="#root" style="text-decoration: none; color: inherit;">Login</a></button>
+    </form>
+    
+</div>
+<div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+   
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
